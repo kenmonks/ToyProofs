@@ -1,0 +1,88 @@
+
+body {
+  width: 740px; 
+  margin: auto;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+/*  color: #6b6b6b;*/
+}
+
+#pagemargins {
+  margin: 20px auto; 40px auto;
+  width: 740px;
+}
+
+#header {
+  text-align:center;
+  background: #005dff;
+  border-radius:10px 10px 0 0;
+}
+
+#header h1 {
+  padding:0.2em 0;
+  letter-spacing: -3px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  margin:0;
+}
+
+#header p {
+  padding:1em 0;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: small;
+  color: #ffffff;
+  margin: 0; 
+}
+
+#header a {
+  text-decoration: none;
+  font-size: small;
+  font-weight: bold;
+  color: #ffffff;
+}
+#header a:hover {
+  color:yellow;
+}
+
+#gamebox {
+  background-color:#f6f6f6;
+  border-radius:0 0 10px 10px;
+}
+
+#leftcolumn {
+    width: 500px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    float: left
+}
+
+#rightcolumn {
+    width: 200px;
+    background-color: #f6f6f6;
+    padding: 10px 10px 10px 0;
+    float: right;
+}
+
+#rightcolumn h2 br {
+    line-height:1.7em;
+}
+
+#footer {
+  clear:both;
+  height: 108px;
+  border-top 1px solid #6b6b6b
+}
+
+#footer p {
+  margin: 0;
+  padding-top: 45px;
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 10pt;
+  font-family: monospace,sans-serif;
+}
+
+#footer a {
+  color: #666666;
+}

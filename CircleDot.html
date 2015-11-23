@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org" />
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+  </script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <title>Toy Proofs: Circle-Dot</title>
+  <link title="Lurch Help Style Sheet" rel="stylesheet" href="lurch.css" type=
+  "text/css" />
+</head>
+
+<body>
+  <div id="pagemargins">
+    <div id="header">
+      <div id="logo">
+        <h1>Circle-Dot</h1>
+      </div>
+
+      <div id="menu">
+        <ul>
+          <li><a href="Introduction.html">Introduction</a></li>
+
+          <li><a href="Scrambler.html">Scrambler!</a></li>
+
+          <li><a href="TriXGame.html">TriX Game</a></li>
+
+          <li>Circle-Dot</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <h1>I don't know what I mean, but I know I'm right!</h1>
+
+      <p>Welcome to Circle-Dot! The object of the game is to construct a
+      <i>circle-dot word</i> made of entirely $\bigcirc$'s and $\bullet$'s. 
+      You do not have any words to begin with. On each of your turns you can
+      apply one of the five available rules to your current list of 
+      constructed circle-dot words to produce a new word. It may require some
+      study and investigation on your part to come up with an efficient strategy
+      for beating this game at the higher levels of difficulty.</p>
+      
+      <p class="cntr"><a href="toyproofs-circledot.html" class="button bigrounded blue">Play Circle-Dot!</a></p>
+
+      <h2>Game Components</h2>
+
+      <p>As described in the <a href='Introduction.html'>Introduction</a>, this
+      game illustrates the basic features of a formal proof system.</p>
+
+      <ul>
+        <li><b>Toys:</b> The toys in this game consist of a string of one or
+        more circles and/or dots, called a circle-dot word.</li>
+
+        <li><b>A Goal:</b> The goal is a randomly selected circle-dot word. The
+        object of the game is to produce this word.</li>
+
+        <li><b>The Starting Position:</b> The starting position in this game is
+        always empty. There are no toys available to you to begin with.</li>
+
+        <li>
+          <b>The Rules:</b> There are five rules you can use to create new
+          circle-dot words. They are the same five rules in every level of the
+          game and are listed under the <b>Moves</b> menu.
+
+          <ul>
+            <li>
+              <b>Inputs:</b> Two of the five rules are called <i>Axioms</i>.
+              These two rules require no inputs. Thus you can apply them at any
+              time to construct the word they output.
+
+              <p>The remaining three rules require previously constructed
+              circle-dot words as their input. The input circle-dot words can
+              be any of those on the list of words you have already produced.
+              These inputs must be in a certain form determined by the values
+              of some 'parameters' $W$ and $V$ which you must specify as
+              circle-dot words. You cannot apply one of these rules unless all
+              of the inputs you have specified are already available in your list
+              of constructed words. You can change your mind and stop an attempt
+              at applying one of these rules by pressing <i>C</i>. You can
+              undo a move and go back to a previously constructed number by
+              pressing <i>U</i>.</p>
+            </li>
+
+            <li><b>Output:</b> The output is a single circle-dot word produced
+            by applying one of the Rules, and specified by your choice of the
+            values of the parameters $W$ and $V$ . This new word is added to the
+            bottom of the list of words you have constructed and becomes
+            immediately available as a possible input for subsequent rule
+            applications. If the output word matches the goal, you win!</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>The Math Behind the Fun</h2>
+
+      <p>This game is much more similar to actual formal mathematical proofs
+      than the other games in the Toy Proofs collection. The circle-dot words
+      correspond to <em>mathematical statements</em>. The goal word is the
+      statement we are trying to prove. Each rule is called a <em>rule of
+      inference</em>. The output of a rule is called the <em>conclusion</em> of
+      that rule. We say that the word produced by that rule is <em>deduced</em>
+      or <em>follows from</em> the inputs by that rule of inference. The list
+      of words we construct correspond to the statements in our proof, each of
+      which is justified by a reason. The reason consists of the name of the
+      rule that is used to deduce that line followed by the line numbers of the
+      previously proven statements that are used as inputs to that rule.</p>
+
+      <p>Like many actual rules of inference in logic, the circle-dot rules
+      have parameters that must be supplied by the person doing the proof in
+      order to apply the rule. As in ordinary rules of inference these
+      parameters are often statements in that formal proof system, but in
+      general they do not have to be.</p>
+
+      <p>Since circle-dot strings clearly have no intrinsic meaning to us, they
+      illustrate that we we can prove statements in a formal system without
+      assigning <em>any meaning</em> to those statements whatsoever. Verifying
+      that a particular statement can be proven in a formal system is a purely
+      mechanical, algorithmic one. In this way we can achieve one of the two
+      goals of a mathematical proof mentioned in the <a href=
+      "Introduction.html">introduction</a>: Objectivity. Whether we can produce
+      a particular circle-dot word or not in the game is not dependent at all
+      on any intuitive meanings we might want to assign to them. Thus even if
+      two people have slightly different intuitive impressions about what a
+      particular circle-dot word means ("<i>I think</i> $\bigcirc\bullet\bigcirc$
+      <i>means 'eyeglasses'"</i>) it will not have any affect on whether or not
+      it can be proven in the game.</p>
+
+      <p>In mathematics, we usually do have meaning assigned to our statements.
+      Indeed, assigning meaning to the statements often will be your best guide
+      in figuring out how to prove a given statement. Indeed, one of the main
+      long term goals of our proofs should be to provide an intuitive
+      explanation of why the particular statement is true. However, formal
+      proof systems allow us to prove those statements no matter what meaning
+      we might choose to assign to them... or even if we chose to assign no
+      meaning to the statements at all. This gives us the objectivity we desire
+      and has a secondary benefit that we are free to assign whatever meanings
+      we like to our statements as long as they are practical and useful to us.
+      In this way, we can say with confidence that while we may not know what
+      we mean by our statements... we know that we are right!</p>
+    </div>
+
+    <div id="footer">
+      <p>Toy Proofs is part of the <a href="http://lurchmath.org/"
+      target="_blank">Lurch Project</a></p>
+    </div>
+  </div>
+</body>
+</html>
+

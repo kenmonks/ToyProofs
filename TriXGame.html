@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org" />
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+  </script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <title>Toy Proofs: TriXGame</title>
+  <link title="Lurch Help Style Sheet" rel="stylesheet" href="lurch.css" type=
+  "text/css" />
+</head>
+
+<body>
+  <div id="pagemargins">
+    <div id="header">
+      <div id="logo">
+        <h1>TriXGame</h1>
+      </div>
+
+      <div id="menu">
+        <ul>
+          <li><a href="Introduction.html">Introduction</a></li>
+
+          <li><a href="Scrambler.html">Scrambler!</a></li>
+
+          <li>TriX Game</li>
+
+          <li><a href="CircleDot.html">Circle-Dot</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <h1>Make Numbers. Win Prizes. Get Famous.</h1>
+
+      <p>Welcome to TriX Game! The object of the game is to produce a single
+      number. You always start with the number 1. On each of your turns you can
+      apply one of two rules to your current number to construct another
+      number, which becomes your new current number. The rules are called
+      Inflate and Deflate, but we won't ruin your fun by telling you what they
+      do. (You can easily figure that out by experimentation.)</p>
+
+      <p>It may require some study and investigation on your part to come up
+      with an efficient strategy for beating this game at the higher levels of
+      difficulty. (The level of difficulty corresponds roughly to the minimum
+      number of turns required to win the game.)</p>
+
+      <p class="cntr"><a href="toyproofs-trixgame.html" class="button bigrounded blue">Play TriX Game!</a></p>
+
+      <h2>Game Components</h2>
+
+      <p>As described in the <a href='Introduction.html'>Introduction</a>, this
+      game illustrates the basic features of a formal proof system.</p>
+
+      <ul>
+        <li><b>Toys:</b> The toys in this game consist of a single positive
+        whole number.</li>
+
+        <li><b>A Goal:</b> The goal is a randomly selected positive number.
+        Your objective is to construct this number.</li>
+
+        <li><b>The Starting Position:</b> The starting position in this game is
+        the number 1. This is the only toy on your list when you begin the
+        game.</li>
+
+        <li>
+          <b>The Rules:</b> There are two legal moves in this game called
+          <i>Inflate</i> and <i>Deflate</i>. It is up to you to determine what
+          they do. Note that you can always Inflate your current number but you
+          can only Deflate certain numbers.
+
+          <ul>
+            <li><b>Inputs:</b> The input for both Rules consists of the current
+            number. The current number is always the last number listed on the
+            table. You can undo a move and go back to a previously constructed
+            number by pressing <i>U</i></li>
+
+            <li><b>Output:</b> The output is the number produced by either
+            Inflating or Deflating the current number. This number is added to
+            the bottom of the list and becomes the current number. If it
+            matches the goal, you win!</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>The Math Behind the Fun</h2>
+
+      <p>This game is closely related to a famous unsolved question in
+      mathematics. In particular, it is not known whether this game can be won
+      for EVERY positive whole number goal. It has been demonstrated by
+      computer that this game can be won for all goal numbers less than
+      $10^{17}$. If you can prove that there is a strategy for winning
+      this game there are cash prizes available and you will certainly become
+      famous! Remember that it isn't enough to come up with a strategy that
+      seems to win every time you play the game, you must prove beyond a doubt
+      that your strategy would win the game no matter what positive whole
+      number is selected as the goal (even if the number is too large to
+      actually fit in a computer).</p>
+    </div>
+
+    <div id="footer">
+      <p>Toy Proofs is part of the <a href="http://lurchmath.org/"
+      target="_blank">Lurch Project</a></p>
+    </div>
+  </div>
+</body>
+</html>
+

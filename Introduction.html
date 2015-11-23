@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org" />
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+
+  <title>Introduction</title>
+  <link title="Lurch Help Style Sheet" rel="stylesheet" href="lurch.css" type=
+  "text/css" />
+</head>
+
+<body>
+  <div id="pagemargins">
+    <div id="header">
+      <div id="logo">
+        <h1>Toy Proofs</h1>
+      </div>
+
+      <div id="menu">
+        <ul>
+          <li>Introduction</li>
+
+          <li><a href="Scrambler.html">Scrambler!</a></li>
+
+          <li><a href="TriXGame.html">TriX Game</a></li>
+
+          <li><a href="CircleDot.html">Circle-Dot</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="content">
+      
+      <h1>You want proof? I'll show you proof!</h1>
+
+      <p>Mathematical proofs have a special place in the spectrum of human
+      knowledge. In no other field are the claims so certain, the conclusions
+      so universally accepted as correct. Why is this? What is the secret
+      behind mathematical proofs that accounts for their incredible
+      success?</p>
+
+      <h2>Intuition and Objectivity</h2>
+
+      <p>There are two traits which characterize a good mathematical proof of a
+      claim. First, it should provide an <em class="boldtoo">explanation</em>
+      that will help the reader understand on an intuitive level why the given
+      claim is true. Second, it must be <em class="boldtoo">objective</em>. The
+      veracity and correctness of the proof should not depend on subjective
+      opinion of anyone.</p>
+
+      <p>But these two claims are sometimes not mutually compatible. What if
+      two people have a different intuitive impression of the same claim? One
+      intuitively believes it is true, another believes it is false? How can we
+      referee such a situation to maintain the objective nature of our
+      mathematical results? How can we achieve objectivity in our proofs?</p>
+
+      <p>One solution is to take intuition and subjectivity out of the picture
+      completely by devising a completely <em>algorithmic</em> mechanism for
+      determining if our proof is correct. If a machine, an electromechanical
+      device with presumably no intuition whatsoever can verify that our proof
+      is correct, then we can be confident that no personal subjective bias or
+      intuition is required. Proofs of this sort, which can be verified
+      algorithmically by a computer (in theory) in a finite amount of time are
+      often referred to as <em>formal proofs</em>.</p>
+
+      <p>One drawback to formal proofs is that they can be quite lengthy and
+      detailed and tedious, sometimes obscuring the intuitive understanding we
+      wish to achieve with our proofs. Most of the mathematical proofs found in
+      math textbooks and journals are not formal proofs. Instead an experienced
+      mathematician tries to convey to his audience two things: (1) a lucid
+      intuitive explanation of why the claim being proved must be valid and (b)
+      enough details about the key steps in a formal proof of the claim that
+      his audience could, if needed, produce a formal proof of the statement.
+      Thus, a typical mathematician uses many shortcuts and convenience
+      conventions to convey to give his proofs the brevity and clarity needed
+      for intuitive understanding of the proof, while providing sufficient
+      information to reconstruct a formal proof of the same claim, thus
+      effectively providing the objective certainty we also demand.</p>
+
+      <p>In this introduction to mathematical proofs, we will first introduce
+      you to formal proofs, and then later add shortcuts and convenient
+      conventions that allow you to slowly make the transition from formal
+      proofs to the standard kinds of mathematical proofs found in books and
+      journals. In this way you will first gain a solid, rigorous, objective
+      method of constructing proofs, and later relax the formality to obtain
+      more intuitive informal mathematical proofs. Having a bridge between
+      these two types of proofs, by having a formal proof skeleton and a
+      repertoire of rigorous, well-defined shortcuts for making them more human
+      readable and intuitive, will allow the best of both worlds in our proofs:
+      intuitive understanding and objective certainty.</p>
+
+      <h2>Toy Proofs!</h2>
+
+      <p>As you might expect, formal mathematical proofs can be somewhat
+      complicated beasties. Thus, we begin by introducing smaller "Toy" proof
+      systems that illustrate some of the basic features of a real formal proof
+      system, but do it in small incremental steps that illustrate the common
+      mechanisms involved.</p>
+
+      <p>In some sense making a formal proof is like playing a game. The kinds
+      of games we have in mind have the following features in common.</p>
+
+      <ul>
+        <li><b>Toys:</b> These are the objects you play with in your game. Toys
+        can be anything: a single number, a list of numbers, a word, a
+        sentence, a geometric shape, a mathematical statement like
+        <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> = <i>z</i><sup>2</sup>, an
+        assumption, a color. (<i>In a formal mathematics proof the toys are
+        usually mathematical statements.</i>)</li>
+
+        <li><b>A Goal:</b> The game must have a special toy called the goal.
+        The object of the game is to produce that particular goal toy. If you
+        successfully produce the goal, you win! (<i>In a formal mathematics
+        proof the goal is the statement that you are trying to prove.</i>)</li>
+
+        <li><b>The Starting Position:</b> The game provides you with zero or
+        more toys to start with that you can use to build other toys. (<i>In a
+        formal mathematics proof these are the 'Givens' or hypotheses.</i>)
+        </li>
+
+        <li>
+          <b>The Rules:</b> What would a game be without rules? This is a set
+          of one or more rules that allow you to construct other toys in the
+          game from the toys that you already have and other information. The
+          essential feature that all such rules must have is that the are
+          completely precise, unambiguous, and algorithmic in nature. (<i>In a
+          formal mathematics proof these are the rules of inference that are
+          used to deduce that one statement follows from other statements.</i>)
+          Each such rule will have the following features.
+
+          <ul>
+            <li><b>Inputs:</b> The inputs usually consist of zero or more toys
+            that you already have available (either because you constructed
+            them or they were given to you as part of the Starting Position)
+            and other information that you might provide.</li>
+
+            <li><b>Output:</b> The output usually consists of a single toy that
+            is produced by the rule. We say that such a toy have been
+            'constructed' or 'justified' by the rule and is then usually 
+            added to your collection of available toys.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>Each of these aspects are illustrated in the games that follow.</p>
+
+      <h2>Let's Play!</h2>
+
+      <p>In this collection there are currently three games: Scrambler!,
+      TrixGame, and Circle-Dot. You can read the help file for each game before
+      you begin if you wish, but they are fairly self-explanatory if you want
+      to dive right in and try them. Each illustrates the concept of a formal
+      proof in a way that is simpler than what you will encounter when you do
+      actual formal mathematical proofs. There is also some sophisticated
+      mathematics hidden behind the first two games. Beware - all three games
+      can be quite addictive!</p>
+      
+      <div id="gamebuttons">
+        <ul>
+          <li><a href="Scrambler.html">Play Scrambler!</a></li>
+
+          <li><a href="TriXGame.html">Play TriX Game</a></li>
+ 
+          <li><a href="CircleDot.html">Play Circle-Dot</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="footer">
+      <p>Toy Proofs is part of the <a href="http://lurchmath.org/"
+      target="_blank">Lurch Project</a></p>
+    </div>
+  </div>
+</body>
+
+</html>
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org" />
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+  </script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <title>Toy Proofs: Scrambler</title>
+  <link title="Lurch Help Style Sheet" rel="stylesheet" href="lurch.css" type=
+  "text/css" />
+</head>
+
+<body>
+  <div id="pagemargins">
+    <div id="header">
+      <div id="logo">
+        <h1>Scrambler!</h1>
+      </div>
+
+      <div id="menu">
+        <ul>
+          <li><a href="Introduction.html">Introduction</a></li>
+
+          <li>Scrambler!</li>
+
+          <li><a href="TriXGame.html">TriX Game</a></li>
+
+          <li><a href="CircleDot.html">Circle-Dot</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <h1>Like Rubik's cube ... only flatter</h1>
+
+      <p>Welcome to Scrambler! The object of the game is to scramble a nice
+      orderly pattern of numbers or colors to produce a given sequence. You
+      always start with $1,2,3,\ldots,n$ for some small number $n$. On
+      each of your turns you can apply one of the available rules to your
+      current sequence to construct another sequence (which becomes your new
+      current sequence). The list of available rules is different for each
+      level of the game. It may require some study and investigation on your
+      part to come up with an efficient strategy for beating this game at the
+      higher levels of difficulty.</p>
+      
+      <p class="cntr"><a href="toyproofs-scrambler.html" class="button bigrounded blue">Play Scrambler!</a></p>
+
+      <h2>Game Components</h2>
+
+      <p>As described in the <a href='Introduction.html'>Introduction</a>, this
+      game illustrates the basic features of a formal proof system.</p>
+
+      <ul>
+        <li><b>Toys:</b> The toys in this game consist of a list of the numbers
+        $1,2,3,\ldots,n$ for some small number $n$, listed in a specific
+        order from left to right. (<i>Such a list is called a
+        <b>permutation</b> of the numbers $1,2,...,n$ in mathematics.</i>)
+        You can also view the list as a sequence of colors or shaded numbered
+        boxes by pressing <i>V</i></li>
+
+        <li><b>A Goal:</b> The goal is a randomly selected ordering of the
+        numbers. The object of game is to produce this list by scrambling the
+        starting list.</li>
+
+        <li><b>The Starting Position:</b> The starting position in this game is
+        always the list consisting of the numbers $1,2,3,\ldots,n$ in increasing
+        order from least to greatest. This is the only toy on your list when
+        you begin the game.</li>
+
+        <li>
+          <b>The Rules:</b> The rules you can use to change the order of the
+          numbers in the current list are different in each level of the game,
+          and are listed under the <b>Moves</b> menu. It is up to you to
+          determine what the various moves do for each level by
+          experimentation.
+
+          <ul>
+            <li><b>Inputs:</b> The input for both Rules consists of the current
+            list of numbers. The current list of numbers is always the last
+            number list on the table. You can undo a move and go back to a
+            previously constructed number by pressing <i>U</i></li>
+
+            <li><b>Output:</b> The output is the list of numbers produced by
+            applying one of the Rules to the current number. This number is
+            added to the bottom of the list and becomes the current number. If
+            it matches the goal, you win!</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>The Math Behind the Fun</h2>
+
+      <p>This game is closely related to the branch of mathematics known as
+      group theory. In particular, each level illustrates a the action of a
+      different group on the numbers $1,2,\ldots,n$</i>. Note that it is known
+      that not all ordered lists can be obtained by applying the given rules in
+      some order. Fortunately, the game only picks goals which can be achieved.
+      So you can be confident that there is a way to win the game, even if you
+      can't find it.</p>
+
+      <p>Like Rubik's cube, the object of this game is to use certain available
+      moves to try to put some colors into a particular arrangement. For
+      Rubik's cube, the available moves consist of twisting a face of the cube
+      by 90°. In Scrambler the colors are arranged in a row, rather than on the
+      face of a cube, and the available moves are those given by the buttons
+      labeled <b>Moves</b>.</p>
+
+      <p>Two words of warning. First, the last level can be extremely difficult
+      (we've only solved it in theory, not in practice!). The other levels are
+      all doable by hand if you play with them and study them enough. Finally,
+      this game is very addictive! You have been warned!</p>
+    </div>
+
+    <div id="footer">
+      <p>Toy Proofs is part of the <a href="http://lurchmath.org"
+      target="_blank">Lurch Project</a></p>
+    </div>
+  </div>
+</body>
+</html>
+
