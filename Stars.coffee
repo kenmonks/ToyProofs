@@ -204,7 +204,7 @@ makeUI = () ->
 
   addShortcut  'N', "New Game", "NewGame()" ,
                'Start a new game with a different goal at the current Level.'
-  addShortcut  'D', "Change Difficulty", "ChangeDifficulty()",
+  addShortcut  'L', "Change Difficulty", "ChangeDifficulty()",
                "Change the Difficulty Level and start a new game."
   addShortcut  'V', "Change View", "ChangeView()",
                "Change the view between stars and numbers."

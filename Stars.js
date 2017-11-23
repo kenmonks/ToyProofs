@@ -204,7 +204,7 @@ makeUI = function() {
   }
   addShortcutGroup('<hr><br><b>Options</b>');
   addShortcut('N', "New Game", "NewGame()", 'Start a new game with a different goal at the current Level.');
-  addShortcut('D', "Change Difficulty", "ChangeDifficulty()", "Change the Difficulty Level and start a new game.");
+  addShortcut('L', "Change Difficulty", "ChangeDifficulty()", "Change the Difficulty Level and start a new game.");
   addShortcut('V', "Change View", "ChangeView()", "Change the view between stars and numbers.");
   addShortcut('U', "Undo one step", "Undo()", 'Undo your last move in the game.\nUse this repeatedly' + ' to go back several moves.');
   addShortcutGroup(hrule);
