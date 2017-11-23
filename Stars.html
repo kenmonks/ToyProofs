@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+
+  <title>Toy Proofs: Stars</title>
+
+  <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+  </script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <link title="Lurch Help Style Sheet" rel="stylesheet" href="lurch.css" type="text/css" />
+</head>
+
+<body>
+  <div id="pagemargins">
+    <div id="header">
+      <div id="logo">
+        <h1 style='padding-left:90px'>Stars!</h1>
+      </div>
+
+      <div id="menu">
+        <ul>
+          <li><a href="Introduction.html">Introduction</a></li>
+
+          <li>Stars!</li>
+
+          <li><a href="Scrambler.html">Scrambler!</a></li>
+
+          <li><a href="TriXGame.html">TriX Game</a></li>
+
+          <li><a href="CircleDot.html">Circle-Dot</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <h1>Reaching for the stars</h1>
+
+      <p>Welcome to Stars! The object of the game is to create a certain number of
+      stars by adding or removing stars from your current collection. You
+      always start with a small positive number of stars. On
+      each of your turns you can apply one of the available moves to your
+      current collection to construct another collection (which becomes your new
+      current collection). The list of available moves is different for each
+      level of the game. It may require some study and investigation on your
+      part to come up with an efficient strategy for beating this game at the
+      higher levels of difficulty.</p>
+
+      <p><b>BONUS Challenge:</b> Can you determine all of the possible collections you can construct
+      from your starting collection using only the given moves?</p>
+
+      <p class="cntr"><a href="toyproofs-stars.html" class="button bigrounded blue">Play Stars!</a></p>
+
+      <h2>Game Components</h2>
+
+      <p>As described in the <a href='Introduction.html'>Introduction</a>, this
+      game illustrates the basic features of a formal proof system.</p>
+
+      <ul>
+        <li><b>Toys:</b> The toys in this game consist of a collection of stars.
+        You can also view a description of each collection by pressing
+        <i>V</i>.</li>
+
+        <li><b>A Goal:</b> The goal is a randomly selected number of stars.
+        The object of game is to produce this many stars by applying the available
+        moves to the collection.</li>
+
+        <li><b>The Starting Position:</b> The starting position in this game is
+        always a small positive number of stars.</li>
+
+        <li>
+          <b>The Rules:</b> The rules you can use to add or remove stars from your
+          collection are different in each level of the game,
+          and are listed under the <b>Moves</b> menu. It is up to you to
+          determine what the various moves do for each level by
+          experimentation or deductive reasoning.
+
+          <ul>
+            <li><b>Inputs:</b> The input for both Rules consists of the current
+            collection of stars. The current collection of stars is always shown
+            in the last row of the table. You can undo a move and go back to a
+            previously constructed number by pressing <i>U</i>.</li>
+
+            <li><b>Output:</b> The output is the new collection of stars produced by
+            applying one of the Rules to the current collection. This new collection
+            is added to the bottom of the table and becomes the current collection. If
+            it matches the goal, you win!</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>The Math Behind the Fun</h2>
+
+      <p>This game is related to the branch of mathematics known as
+      number theory. In particular, winning a particular game is equivalent to finding
+      some way of expressing the difference between number of stars in the goal and
+      the number of stars you start with as a linear combination of the given move
+      numbers where the coefficients in the linear combination must be nonnegative
+      integers. In some levels and instances of the game you can produce any positive
+      number of stars.  In others you cannot, in which case it is an interesting mathematical
+      question to determine exactly which goals can be reached from the starting
+      collection in a particular game. Fortunately, the game only picks goals which
+      can be achieved, so you can be confident that there is a way to win the game, even if you
+      can't find it.</p>
+
+    </div>
+
+    <div id="footer">
+      <p>Toy Proofs is part of the <a href="http://lurchmath.org"
+      target="_blank">Lurch Project</a></p>
+    </div>
+  </div>
+</body>
+</html>

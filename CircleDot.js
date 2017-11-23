@@ -96,7 +96,7 @@ Rule3.coloredoutput=function() {
 // put the rules in a list so I can refer to them by number
 Rule=['tsilb',Rule1,Rule2,Rule3]
 
-// override the statement.satisfies function. 
+// override the statement.satisfies function.
 statement.prototype.satisfies = function(stmt) {
   // each statement's content is a circledot, and we compare the content
   // strings of the circle dot objects
@@ -108,27 +108,27 @@ function makeMenu (menu) {
   case 'moves':
     addShortcutGroup('Moves'.bold()+newline+'Axioms'.italics())
     addShortcut( 'A', 'Axiom A', 'update("AxiomA()")' ,
-                 '<nobr>Insert O&bull;</nobr>')
+                 '<nobr>Insert O&bull;</nobr>', 'movebutton')
     addShortcut( 'B', "Axiom B", 'update("AxiomB()")' ,
-                 '<nobr>Insert &bull;O</nobr>')
+                 '<nobr>Insert &bull;O</nobr>', 'movebutton')
     addShortcutGroup('<i>Rules</i>')
     addShortcut( '1', "Rule 1", 'update("editRule(1)")' ,
-                 'Given wv and vw\ninsert w')
+                 'Given wv and vw\ninsert w', 'movebutton')
     addShortcut( '2', "Rule 2", 'update("editRule(2)")' ,
-                 'Given w and v'+newline+'insert w&bull;v')
+                 'Given w and v'+newline+'insert w&bull;v', 'movebutton')
     addShortcut( '3', "Rule 3", 'update("editRule(3)")' ,
-                 'Given wv&bull;'+newline+'insert wO')
+                 'Given wv&bull;'+newline+'insert wO', 'movebutton')
     break
   case 'options':
     addShortcutGroup('<hr><br>'+'Options'.bold())
     addShortcut( 'N', "New Game", 'update("NewGame()")' ,
                  'Start over at the current Level.')
-//    addShortcut( 'V', "Change View", 'update("ToggleView()")', 
+//    addShortcut( 'V', "Change View", 'update("ToggleView()")',
 //                 "Select the style of circles and dots." )
-    addShortcut( 'L', "Change Level", 'update("changeLevel()")', 
+    addShortcut( 'L', "Change Level", 'update("changeLevel()")',
                  'Abandon this game and start a new game'+
                  ' with a different goal.')
-    addShortcut( 'U', "Undo one step", 'update("pf.pop()")' , 
+    addShortcut( 'U', "Undo one step", 'update("pf.pop()")' ,
                  'Undo your last move in the game.\nUse this repeatedly'+
                  ' to go back several moves.')
     break
@@ -141,7 +141,7 @@ function makeMenu (menu) {
                  '<nobr>Enter a &middot;</nobr>')
     addShortcut( 'U', 'Undo (backspace)', 'update("undoChar(\'W\')")' ,
                  'Delete the last character entered.')
-    addShortcutGroup(hrule)                 
+    addShortcutGroup(hrule)
     addShortcut( 'V', 'Edit V instead', 'update("showMenu(\'editV\')")' ,
                  'Switch from editing W to editing V.')
     addShortcut( 'C', 'Cancel', 'update("cancelRule()")' ,
@@ -156,7 +156,7 @@ function makeMenu (menu) {
                  '<nobr>Enter a &middot;</nobr>')
     addShortcut( 'U', 'Undo (backspace)', 'update("undoChar(\'V\')")' ,
                  'Delete the last character entered.')
-    addShortcutGroup(hrule)                 
+    addShortcutGroup(hrule)
     addShortcut( 'W', 'Edit W instead', 'update("showMenu(\'editW\')")' ,
                  'Switch from editing V back to editing W.')
     addShortcut( 'C', 'Cancel', 'update("cancelRule()")' ,
@@ -250,7 +250,7 @@ function cancelRule() {
   showMenu('main')
 }
 
-function changeLevel() { 
+function changeLevel() {
   level = (level+1)%levels.length
   return NewGame()
 }
@@ -284,10 +284,10 @@ CircleDot.prototype.format=function() {
 }
 function circledot(s) { return new CircleDot(s) }
 
-function red(s) { 
+function red(s) {
   return '<font color="#FF0000" size=5>'+sym(s)+'</font>'
 }
-function green(s) { 
+function green(s) {
   return '<font color="#00FF00" size=5>'+sym(s)+'</font>'
 }
 
@@ -411,8 +411,7 @@ function update(cmdstring) {
 }
 
 function main() {
-  return update("NewGame()") 
+  return update("NewGame()")
 }
 
 function toyProofsStart () { return main() }
-

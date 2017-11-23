@@ -51,7 +51,7 @@ FullTwiddle   = new generator([5,6,7,8,9,10,11,12,1,2,3,4],'F','Full Twiddle')
 Z2wrZ2wrZ3    = new group(12,[LittleTwiddle,MiddleTwiddle,FullTwiddle],
                           'Three Ring Circus')
 
-// This is a strange group of order 192 obtained by 
+// This is a strange group of order 192 obtained by
 // a slight modification of S2 \wr S3 w/ product action
 // Crux Move: LTPL = (38)(67)
 LeapFrog   = new generator([5,6,7,8,1,2,3,4],'L','LeapFrog')
@@ -68,7 +68,7 @@ M12     = new group(12,[Reverse,Fold],'Death!')
 level=0
 levels=[Z3xZ4,D6,S3wrS2,Z2wrZ2wrZ3,S2wrS3,A6,G192,M12]
 
-function ChangeDifficulty() { 
+function ChangeDifficulty() {
   level = (level+1)%levels.length
   return NewGame()
 }
@@ -114,7 +114,7 @@ function padRGB(s) {
 
 // color j out of n
 function color(i,n) {
-  with (Math) { 
+  with (Math) {
     var k=ceil(pow(n,1/3))
     var j=(2*n < k*k*k) ? 2*i : i
     var a=floor(j/(k*k))
@@ -144,7 +144,7 @@ function ToggleViewMode() {
        formatType='color'
        break
      case 'numbered':
-       formatType='greyscale'     
+       formatType='greyscale'
    }
    return formatDoc()
 }
@@ -156,7 +156,7 @@ function formatCell(i,bg) {
     case 'greyscale':
       fgcolor = '2222FF'
       bgcolor = greyscale(i)
-      return '  <td align="center" bgcolor="#' + bgcolor + 
+      return '  <td align="center" bgcolor="#' + bgcolor +
              '"<b><font color="#' + fgcolor +'">' + i + '</font></b></td>\n'
     case 'color':
       bgcolor = color(i,G.n)
@@ -217,7 +217,7 @@ function NewGame () {
   return formatDoc()
 }
 
-function Undo () { 
+function Undo () {
   if ( doc.length > 1 )
     doc.pop()
   return formatDoc()
@@ -229,21 +229,21 @@ function makeUI () {
   for (var i=0;i<G.numgens;i++) {
     var gen=G.genlist[i]
     addShortcut(gen.hotkey, gen.label, 'ActOn(G.genlist['+i+'])' ,
-                'Apply the '+gen.label+' Rule to the last line.' )
+                'Apply the '+gen.label+' Rule to the last line.', 'movebutton' )
   }
   addShortcutGroup('<hr><br><b>Options</b>')
   addShortcut( 'N', "New Game", "NewGame()" ,
                'Start a new game with a different goal at the current Level.')
-  addShortcut( 'D', "Change Difficulty", "ChangeDifficulty()", 
+  addShortcut( 'D', "Change Difficulty", "ChangeDifficulty()",
                "Change the Difficulty Level and start a new game." )
   addShortcut( 'C', "Change View", "ToggleViewMode()" ,
                "View the current game as numbers, colors, or greyscale." )
-  addShortcut( 'U', "Undo one step", "Undo()" , 
+  addShortcut( 'U', "Undo one step", "Undo()" ,
                'Undo your last move in the game.\nUse this repeatedly'+
                ' to go back several moves.')
   addShortcutGroup(hrule)
   addShortcut( 'H', 'Help', 'showHelp()' ,
-               'Display the instructions for this game.')    
+               'Display the instructions for this game.')
 }
 
 function showHelp() {

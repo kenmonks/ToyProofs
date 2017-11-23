@@ -1,10 +1,33 @@
 
 body {
-  width: 740px; 
+  width: 740px;
   margin: auto;
   font-family: Arial,Helvetica,sans-serif;
   font-size: 12px;
 /*  color: #6b6b6b;*/
+}
+
+.movebutton {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  border-radius: 10px;
+}
+
+
+#mystar {
+   display: inline-block;
+   height: 2em;
+   width: 2em;
+   background-image: url("star.png");
+   background-size: 2em auto;
+   background-repeat: no-repeat;
 }
 
 #pagemargins {
@@ -13,9 +36,9 @@ body {
 }
 
 #header {
-  text-align:center;
+  text-align: center;
   background: #005dff;
-  border-radius:10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 #header h1 {
@@ -32,7 +55,7 @@ body {
   font-family: Arial,Helvetica,sans-serif;
   font-size: small;
   color: #ffffff;
-  margin: 0; 
+  margin: 0;
 }
 
 #header a {

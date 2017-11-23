@@ -1,9 +1,9 @@
 /********************************************************************\
 
  The SimpleTrix Game
- 
+
  Non-document format
- 
+
 \********************************************************************/
 
 doc = []
@@ -16,13 +16,13 @@ function T(x) { return (x%2==0)?x/2:(3*x+1)/2 }
 
 _TST = [0,0]
 
-function TST(x) { 
+function TST(x) {
   if (typeof _TST[x]=='undefined')
     _TST[x]=1+TST(T(x))
   return _TST[x]
 }
 
-function orbit(x) { 
+function orbit(x) {
   var L=[x]
   while (x!=1) {
     x=T(x)
@@ -36,7 +36,7 @@ function gameWon () {
 }
 
 function formatRow ( label, content, bgcolor1, bgcolor2 ) {
-    return '<tr><td align="left" width="150" bgcolor="' 
+    return '<tr><td align="left" width="150" bgcolor="'
          + bgcolor1 + '">' + label + '</td>'
          + '<td align="left" width="50%" bgcolor="' + bgcolor2 + '">' + content
          + '</td></tr>\n'
@@ -73,7 +73,7 @@ function formatDoc () {
          + 'cellspacing=5 bgcolor="#dddddd">\n' + result + '</table>\n'
 }
 
-function ChangeDifficulty() { 
+function ChangeDifficulty() {
    level = (level+1)%4
    return NewGame()
 }
@@ -81,7 +81,7 @@ function ChangeDifficulty() {
 function NewGame () {
   level = Math.min(level,3)
   goal = Math.floor( Math.random()*997 ) + 2
-  while (TST(goal)<bounds[level][0] || bounds[level][1]<TST(goal)) 
+  while (TST(goal)<bounds[level][0] || bounds[level][1]<TST(goal))
     goal = Math.floor( Math.random()*997 ) + 2
   doc = [ 1 ]
   return formatDoc()
@@ -91,7 +91,7 @@ function inflateTo () {
     return doc.length ? 2*doc[doc.length-1] : 0
 }
 
-function Inflate () { 
+function Inflate () {
     if ( gameWon() )
         return formatDoc()
     var n = doc.length
@@ -108,7 +108,7 @@ function deflateTo () {
     return doc.length ? ( 2*doc[doc.length-1]-1 ) / 3 : 0
 }
 
-function Deflate () { 
+function Deflate () {
     if ( gameWon() )
         return formatDoc()
     if ( canDeflate() )
@@ -116,7 +116,7 @@ function Deflate () {
     return formatDoc()
 }
 
-function Undo () { 
+function Undo () {
     if ( doc.length > 1 )
         doc.pop()
     return formatDoc()
@@ -126,21 +126,21 @@ function makeUI () {
   clearShortcuts()
   addShortcutGroup('<b>Moves</b>')
   addShortcut( 'I', "Inflate Number", "Inflate()" ,
-               'Inflate the last number.' );
+               'Inflate the last number.', 'movebutton' );
   addShortcut( 'D', "Deflate Number", "Deflate()" ,
                'Deflate the last number, if possible.\n'
-              +'Some numbers cannot be deflated.' );
+              +'Some numbers cannot be deflated.', 'movebutton' );
   addShortcutGroup('<hr><br><b>Options</b>')
   addShortcut( 'N', "New Game", "NewGame()" ,
                'Start a new game with a different goal at the current Level.')
-  addShortcut( 'L', "Change Difficulty", "ChangeDifficulty()", 
+  addShortcut( 'L', "Change Difficulty", "ChangeDifficulty()",
                "Change the Difficulty Level and start a new game." )
-  addShortcut( 'U', "Undo one step", "Undo()" , 
+  addShortcut( 'U', "Undo one step", "Undo()" ,
                'Undo your last move in the game.\nUse this repeatedly'+
                ' to go back several moves.')
   addShortcutGroup(hrule)
   addShortcut( 'H', 'Help', 'showHelp()' ,
-               'Display the instructions for this game.')    
+               'Display the instructions for this game.')
 }
 
 function showHelp() {
@@ -153,4 +153,3 @@ function toyProofsStart ()
     makeUI()
     return NewGame()
 }
-

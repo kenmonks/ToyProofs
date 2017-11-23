@@ -29,12 +29,13 @@ function addShortcutGroup ( name )
     controls().innerHTML += '<h2>' + name + '</h2>\n';
 }
 
-function addShortcut ( letter, phrase, code, tooltip )
+function addShortcut ( letter, phrase, code, tooltip, cssclass )
 {
+    if (cssclass === undefined) { cssclass = 'defaultbutton' }
     var quoted = code.replace( RegExp( '\\\\', 'g' ), '\\\\' )
                      .replace( RegExp( '[\']', 'g' ), '\\\'' )
                      .replace( RegExp( '["]', 'g' ), '&quot;' );
-    var button = '<input type="button" value="'
+    var button = '<input type="button" class="'+ cssclass +'" value="'
                + ' ' + letter + ': ' + phrase + '" '
                + 'onclick="doShortcut(\'' + quoted + '\');"/>';
     controls().innerHTML += '<p>' + button + '</p>\n';
@@ -84,4 +85,3 @@ bindEvent( document, 'keydown',
                   }
               }
           } );
-
